@@ -268,3 +268,43 @@ void main() {
 }
 
 So it was all about constructors */
+
+
+
+/*Destructor  -> Opposite of constructor
+
+class Studnet {
+public:
+    string name;
+    double cgpaPtr;
+
+    Student(string name, double cgpa) {
+        this -> name = name;
+        cgpaPtr = new double;
+        *cgpaPtr = cgpa;
+    }
+
+    // destructor has same name as class so
+
+    ~Student() {
+        cout << "HI, I delete everything";
+        delete cgpaPtr;   // if you do use destructor then it will cause memmory leak
+    }
+
+    void getInfo() {
+        cout << "name : " << name << endl;
+        cout << "cgpa : " << cgpaPtr << endl;
+    }  
+};
+
+
+    void main() {
+        Student s1("Abdul Munnam, 3.6);
+        s1.getInfo();
+
+    }     */
+
+
+
+
+   
