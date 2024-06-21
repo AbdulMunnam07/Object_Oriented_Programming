@@ -306,5 +306,239 @@ public:
 
 
 
+/* 3. Inhertance (used for code reusability)
+=> When properties & member functions of base class are passed on to the derived class.
 
+class Person {
+public:
+    string name;
+    int age;
+
+
+    Person (string name, int age) {
+        this->name = name;
+        this->age = age;
+    }
+    Person () {
+    
+    }
+};
+
+class Student : public Person {
+public:
+    int rollNo;
+
+
+    Student(string name, int age, int rollNO) : Person(string name, int age) {
+        cout << "Child Constructor...\n";
+    }
+
+    void getInfo() {
+        cout << "name :" << name << endl;
+        cout << "age :" << age << endl;
+        cout << "rollNO :" << rollNO << endl;
+    }
+};
+
+int main() {
+    Student s1;
+    s1.name = "Ali";
+    s1.age = 19;
+    s1.rollNO = 587;
+}     
+
+                        *Mode of Inheritace*
+
+------------------------------------------------------------------
+             | Derived Class  |  Derived Class  |  Derived Class |
+-----------------------------------------------------------------
+Base Class  | Private Mode   | Protected Mode  | Public Mode    |
+----------------------------------------------------------------
+Private    | Not Inherited  | Not Inherited   | Not Inherited  |
+---------------------------------------------------------------
+Protected | Private        |  Protected      |  Protected     |
+--------------------------------------------------------------
+Private  |    Private     |  Protected      |  Public        |
+-------------------------------------------------------------
+
+
+
+Types of Inheritance
+1. Single Inheritance (Parent -> Child)
+2. Multi-level Inheritace (Parent -> Parent -> Child)
+3. Multiple Inheritace (Parent -> Cihld <- Parent)
+4. Hierarchial Inheritance (Child <- Parent -> Child)
+5. Hybrid Inheritace
+            
+
+
+// Let's understand this concept of Multi-level Inheritace by example
+
+class Person {
+public:
+    string name;
+    int age;
+};
+
+class Student : public Person {
+public:
+    int rollNo;
+};  
+
+
+class GradStudents : public Student{
+public:
+    string research
+};
+
+int main() {
+    GradStudents s1;
+    s1.name = "Habib"
+    s1.research = "Quantum Physics"
+    cout << s1.name << endl;
+    cout << s1.research << endl;
+    return 0;
+}
    
+        
+// Let's understand this concept of Multiple Inheritace by example
+
+class Student {
+public:
+    string name;
+    int rollNo;
+};
+
+class Teacher {
+public:
+    string subject;
+    double salary
+};
+
+class TA : public Student, public Teacher {
+};
+
+int main() {
+    TA t1;
+    t1.name = "Ali"
+    t1.subject = "Engineering"
+
+    cout << t1.name << endl;
+    cout << t1.subject << endl;
+
+}     */
+
+
+
+/* Polymorphism => is the ability of objects to take on different forms or behave in different ways depending on the context in which they are used.
+
+-> Constructor overloading is the basic example of Polymorphism
+
+class Studnet {
+public:
+    string name;
+
+    Student() {
+        cout << "Non-prametrized Construcotr";
+    }
+
+    Student (string name) {
+        cout << "Parameterized Construcotr"
+    }
+};
+
+int main() {
+    Student s1; // This will called Non-prametrized Construcotr
+
+    Student s1("Aliyar")
+
+    return 0;
+}  // Contructor overloading is called polymorphism
+
+
+There are two types of Polymorphism
+- Compile Time Polymorphism (Contrucctor overloading,Operator overloading, Function Overloading => Two Functions having same name but different parameters/type)
+- Run Time Polymorphism
+
+
+Let's discuss about Compile Time Polymorphism
+
+class Print {
+public:
+    void show(int x) {
+        cout << "int : " << x << endl;
+    }
+
+    void show(char ch) {
+        cout << "char : " << ch << endl;
+    }
+
+};
+
+void main() {
+    Print p1;
+    p1.show("&") // This will print char function
+    p1.show(101) // This will print int function
+}
+
+
+Run Time Polymorphism
+1. Function Overriding => Parent & Child both contain the same function with different implementation. The parent class is said to be overridden
+2. Virual Function  => A virtual function  is a member function that you expect to be redefined in derived classes.
+Properties :
+- Virtual functins are Dynamic in nature.
+- Defined by the keyword "virtual" inside a base class and are always declared with a base class and overridden in a child class.
+- A virtual function is called during Runtime.     */
+
+
+
+/*  4. Abstraction => Hiding all unnecessary detail & showing only the important parts (For this implement we used Acess Modifiers)  
+
+There is also one more way of implementing abstractions
+- Using Abstract Classes (Abstract class do not create any object,it's only a blue print for another classes)
+
+=> Abstract classes are used to provide a base class from which other classes can be derived.
+=> They cannot be instantiated(instace = object) and are meant to be interited.=> Abstract classes are typically used to define an interface for derived classes
+
+
+
+Let's discuss about Abstract class
+class Shape {  // bastract class
+    virtual void draw() = 0;   // Pure virtual function
+};
+
+class Circle : public Shape {
+public:
+    void draw() {
+        cout << "Drawing a circle\n";
+    }
+};
+
+void main() {
+    Circle c1;
+    c1.draw();
+    return 0;
+}
+
+
+Last Concept *Static Keyword*
+
+1. Statuc Variables
+- Variable declared as static in a function are created & initialized once for the lifetime of the programm // in Function
+- Static variable in a class are created & initialized once. They are shored by all the object of the class // in Class
+
+for Example:
+void fun() {
+    static int x = 0;
+    cout << "x : " << x << endl;
+    x++
+}
+
+void main() {
+    fun();    // here value of the fun() will increase everytimr we call it because of static keyword in above
+    fun();
+    fun();
+}
+
+2. Static Objects
+*/
