@@ -13,7 +13,6 @@ Welcome to the **Object-Oriented Programming (OOP) Concepts** repository! This r
   - [Abstraction](#abstraction)
   - [Inheritance](#inheritance)
   - [Polymorphism](#polymorphism)
-- [Examples](#examples)
 - [Conclusion](#conclusion)
 - [Contributing](#contributing)
 - [License](#license)
@@ -49,15 +48,6 @@ Inheritance is a way to form new classes using classes that have already been de
 ### Polymorphism
 
 Polymorphism allows methods to do different things based on the object it is acting upon, even though they share the same name.
-
-## Examples
-
-This section contains code examples to illustrate the OOP concepts discussed above.
-
-- [Example 1: Encapsulation](examples/encapsulation.md)
-- [Example 2: Abstraction](examples/abstraction.md)
-- [Example 3: Inheritance](examples/inheritance.md)
-- [Example 4: Polymorphism](examples/polymorphism.md)
 
 ## Conclusion
 
