@@ -1,4 +1,4 @@
-# First watch complelte Vedio! Then you can understand teh whole code easily
+# First watch complelte Vedio! Then you can understand the whole code easily
 # OOP in Python
 # ----------------
 # TO map with real world scenarios, we stated using object in code. This is called object Oriented Programming
