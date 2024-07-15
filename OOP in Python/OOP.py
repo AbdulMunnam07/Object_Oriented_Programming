@@ -4,6 +4,9 @@
 
 
 # CLass & Object in Python
+# Before starting OOP we need to understand Objects & Classes 
+# Objects => Are entities in the real world (pen, mouse etc.)
+# Class => Is like a blueprint of these entities
 # --------------------------
 # Class is a blur print for creating objects.
 
