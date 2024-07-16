@@ -137,13 +137,125 @@ car1.start()
 
 ____________________________________________________________________________________________________________________
 
-# Note: Here is only two Pilars of OOP. I'll update other two later
+# del keyword => It is used to delete object properties or object itself
+
+# for example if we have object named s1 and we want to delete it so we can delete it in the following way
+
+del s1   # It delete object itself
+
+# If object has property like name so we can delete it
+
+del s1.name   # delete naem property
+
+
+_____________________________________________________________________________________________________________________
+
+# Private attributes & methods
+
+# Conceptual Implementation in python
+# Private attribute & methods are meant to be used only within the class and are not accessible from outside the class
+
+class Account:
+    def __init__(self, acc_no, acc_pass):
+        self.acc_no = acc_no
+        self.__acc_pass = acc_pass   # By adding "__" our attribute become private
+
+    def method(self):
+        print(self.__acc_pass)  # Here we can access password
+
+
+acc1 = Account("1234", "asffd")
+print(acc1.acc_no)
+print(acc1.__acc_pass)   # We Can not acces password here because it become provate and it's only accessible in class
+
+# Let's take an example
+
+class Person:
+    __name = "Abdullah"
+
+    def __hello(self):
+        print("Hello User!!!!!!!")
+
+    def welcome(self):
+        print(self.__hello)
+
+p1 = Person()
+print(p1.welcome()) # This is OK scenario
+print(p1.__hello()) # But this is not OK seen. It will give error
+
+___________________________________________________________________________________________________________________
+
+# 3 Inheritance => When one class derives the properties & methods of another calss is called....
+
+class Car:
+    @staticmethod
+    def start():
+        print("Car started.....")
+
+    @staticmethod
+    def stop():
+        print("Car Stopped........")
+
+class ToyotaCar(Car):
+    def __init__(self, name):
+        self.name = name
+
+
+car1 = ToyotaCar("Fortuner")
+car2 = ToyotaCar("Prius")
+
+print(car1.name)
+print(car1.start())
+
+
+# There are three types of Inheritance
+# 1. Single Inheritance    this type of Inheritance discuss above
+# 2. Multi-level Inheritance
+# 3. Multiple Inheritance
+
+
+# Multi-level Inheritance
+class Car:
+    @staticmethod
+    def start():
+        print("Car started.....")
+
+    @staticmethod
+    def stop():
+        print("Car Stopped........")
+
+class ToyotaCar(Car):
+    def __init__(self, brand):
+        self.brand = brand
+
+
+class Fortuner(ToyotaCar):
+    def __init__(self, type):
+        self.type = type
+
+
+car1 = Fortuner("Diesel")
+car1.start()
 
 
 
+# Multiple Inheritance
+class A:
+    varA = "WElcome to class A"
+
+class B:
+    varB = "WElcome to class B"
+
+class C(A, B):
+    varA = "WElcome to class C"
 
 
+c1 = C()
+print(c1.varC)
+print(c1.varB)
+print(c1.varA)
 
+_____________________________________________________________________________________________________________________
 
 
 
