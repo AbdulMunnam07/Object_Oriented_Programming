@@ -117,3 +117,8 @@ class Student {
 
 let s4 = new Student("Saad",18)
 console.log(s4.marks);
+
+
+
+
+// This was all about OOP in JS. If you want to learn more concepts of Object-Oriented programming you can learn OOP in python 
