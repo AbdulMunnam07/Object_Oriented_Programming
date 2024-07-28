@@ -8,13 +8,13 @@
 
 // Let's take one example to create class
 
-`class Student {
+class Student {
     constructor () {
         this.name = "Abdul Munnam"
         this.age = 20
         this.height = "6 Foot"
     }
-}`
+}
 
 /* Well, you have created class but what is the "contructor", "this" in class? 
 Ok, Let me explain
